@@ -19,4 +19,20 @@ class ApiMuiltDataServices{
   }
 
 
+  Future<dynamic> getMultiDataWithoutModel()async{
+    try{
+      var response = await http.get(Uri.parse("https://reqres.in/api/unknown"));
+      if(response.statusCode == 200){
+        final model = jsonDecode(response.body);
+        return model;
+      }
+    }catch (e){
+      print(e.toString());
+    }
+    return null;
+  }
+
+
+
+
 }
