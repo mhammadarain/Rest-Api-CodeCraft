@@ -75,7 +75,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       setState(() {
                         isReady = false;
                         Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen(
-                            token: value["token"].toString())));
+                            //token: value["token"].toString()
+                        )));
                       });
                     });
 
