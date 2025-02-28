@@ -1,4 +1,5 @@
 import 'package:api_practice_codecraft/screens/create_job_screen.dart';
+import 'package:api_practice_codecraft/screens/image_screen.dart';
 import 'package:api_practice_codecraft/screens/list%20post/screen_complex_list.dart';
 import 'package:api_practice_codecraft/screens/list%20post/screen_list_post.dart';
 import 'package:api_practice_codecraft/screens/list%20post/screen_list_without_model.dart';
@@ -22,12 +23,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: RegisterScreen()
+      home: ImageScreen()
     );
   }
 }
