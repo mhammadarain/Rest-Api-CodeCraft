@@ -59,26 +59,26 @@ class _LoginScreenState extends State<LoginScreen> {
                       isReady = true;
                     });
                     //with model
-                    // ApiLoginServices().loginWithModel(email.text.toString(), password.text.toString()).then((value){
-                    //   setState(() {
-                    //     loginModel = value!;
-                    //     isReady = false;
-                    //     Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen(
-                    //         token: loginModel.token.toString())));
-                    //   });
-                    // });
+                    ApiLoginServices().loginWithModel(email.text.toString(), password.text.toString()).then((value){
+                      setState(() {
+                        loginModel = value!;
+                        isReady = false;
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen(
+                            token: loginModel.token.toString())));
+                      });
+                    });
 
 
 
                     //without model
-                    ApiLoginServices().loginWithoutModel(email.text.toString(), password.text.toString()).then((value){
-                      setState(() {
-                        isReady = false;
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen(
-                            //token: value["token"].toString()
-                        )));
-                      });
-                    });
+                    // ApiLoginServices().loginWithoutModel(email.text.toString(), password.text.toString()).then((value){
+                    //   setState(() {
+                    //     isReady = false;
+                    //     Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen(
+                    //         //token: value["token"].toString()
+                    //     )));
+                    //   });
+                    // });
 
                   },
                   style: ElevatedButton.styleFrom(

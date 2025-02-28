@@ -66,10 +66,12 @@ class _CreateJobScreenState extends State<CreateJobScreen> {
                         createJobModel = value!;
 
                         Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen(
-                          id: createJobModel.id.toString(),
-                          name: createJobModel.name.toString(),
-                          job: createJobModel.job.toString(),
-                          time: createJobModel.createdAt.toString()
+
+                          //uncommit when you run and commit login and register
+                          // id: createJobModel.id.toString(),
+                          // name: createJobModel.name.toString(),
+                          // job: createJobModel.job.toString(),
+                          // time: createJobModel.createdAt.toString()
                         )));
                       });
                     });
