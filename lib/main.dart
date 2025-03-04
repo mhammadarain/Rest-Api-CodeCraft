@@ -8,6 +8,7 @@ import 'package:api_practice_codecraft/screens/list%20post/screen_user_data.dart
 import 'package:api_practice_codecraft/screens/login_screen.dart';
 import 'package:api_practice_codecraft/screens/multi%20post/multi_data_screen.dart';
 import 'package:api_practice_codecraft/screens/multi%20post/multi_data_without_model_screen.dart';
+import 'package:api_practice_codecraft/screens/put_patch_delete_screen.dart';
 import 'package:api_practice_codecraft/screens/register_screen.dart';
 import 'package:api_practice_codecraft/screens/single%20post/screen_with_model.dart';
 import 'package:api_practice_codecraft/screens/single%20post/screen_without_model.dart';
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: ImageScreen()
+      home: PutPatchDeleteScreen()
     );
   }
 }
